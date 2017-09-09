@@ -6,3 +6,4 @@ Per the Week 1 Handout, use the following links to obtain / install required sof
 * [Apache Maven](https://maven.apache.org/download.cgi)
 * [Eclipse IDE](https://eclipse.org/downloads/packages)
 * [Apache Tomcat](http://tomcat.apache.org)
+* [MySQL](https://www.mysql.com/) / [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
