@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans.xsd
+          http://www.springframework.org/schema/context 
+          http://www.springframework.org/schema/context/spring-context.xsd
+          http://www.springframework.org/schema/util
+          http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <context:component-scan base-package="edu.hes.e57.demo"/>
+    
+    <util:map id="map" map-class="java.util.HashMap">
+        <entry key="Chevrolet">
+            <value>Camaro</value>
+        </entry>
+        <entry key="Dodge">
+            <value>Charger</value>
+        </entry>
+        <entry key="Ford">
+            <value>Mustang</value>
+        </entry>
+        <entry key="theBean">
+            <ref bean="collectionService"/>
+        </entry>
+    </util:map>
+    
+    <util:properties id="props">
+        <prop key="manufacturer">Chevrolet</prop>
+        <prop key="vehicle">Camaro</prop>
+    </util:properties>
+    
+    <util:set id="set">
+        <value>Set Value 1</value>
+        <value>Set Value 2</value>
+        <value>Set Value 3</value>
+        <ref bean="collectionService"/>   
+    </util:set>	
+    
+    <util:list id="list">
+        <value>List Value 1</value>
+        <value>List Value 2</value>
+        <value>List Value 3</value>
+        <ref bean="collectionService"/> 
+    </util:list>
+</beans>
