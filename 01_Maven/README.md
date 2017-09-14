@@ -1,60 +1,68 @@
 # Maven
 
-Note: Demo App modified from the [Pro Spring](https://github.com/Apress/pro-spring-14) Class: com.apress.prospring4.ch2.HelloWorldSpringDI 
-
 This example covers:
-+ Creating a MVN Project in Eclipse
-+ Building and Running an Application
-+ Remote Debugging
++ Creating a MVN Project
 
 
-### To Build
+### To Generate
 
 ```
-mvn clean install
+$ mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.1
 ```
 
 
-### To Run
+### Configuration Properties
 
 ```
-mvn exec:java -Dexec.mainClass="edu.hes.e57.demo.HelloWorld"
+groupId: edu.hes.e57.demo
+artifactId: demo
+version: : 1.0-SNAPSHOT                  
+package: jar
 ```
-
-
-### To Remote Debug
-+ setup remote debugging in Eclipse
-
-```
-mvnDebug exec:java -Dexec.mainClass="edu.hes.e57.demo.HelloWorld"
-```
-
-+ Click Debug button in Eclipse
 
 
 ### Console Output
 
 ```
-$ mvnDebug exec:java -Dexec.mainClass="edu.hes.e57.demo.HelloWorld"
-Preparing to Execute Maven in Debug Mode
-Listening for transport dt_socket at address: 8000
+$ mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.1
 [INFO] Scanning for projects...
 [INFO]                                                                         
 [INFO] ------------------------------------------------------------------------
-[INFO] Building demo 0.0.1-SNAPSHOT
+[INFO] Building Maven Stub Project (No POM) 1
 [INFO] ------------------------------------------------------------------------
 [INFO] 
-[INFO] --- exec-maven-plugin:1.5.0:java (default-cli) @ demo ---
-Sep 08, 2017 5:19:32 AM org.springframework.context.support.ClassPathXmlApplicationContext prepareRefresh
-INFO: Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1bc1c270: startup date [Fri Sep 08 05:19:32 EDT 2017]; root of context hierarchy
-Sep 08, 2017 5:19:32 AM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
-INFO: Loading XML bean definitions from class path resource [META-INF/spring/app-context.xml]
-Hello, World!
+[INFO] >>> maven-archetype-plugin:3.0.1:generate (default-cli) > generate-sources @ standalone-pom >>>
+[INFO] 
+[INFO] <<< maven-archetype-plugin:3.0.1:generate (default-cli) < generate-sources @ standalone-pom <<<
+[INFO] 
+[INFO] --- maven-archetype-plugin:3.0.1:generate (default-cli) @ standalone-pom ---
+[INFO] Generating project in Interactive mode
+[INFO] Archetype repository not defined. Using the one from [org.apache.maven.archetypes:maven-archetype-quickstart:1.1] found in catalog remote
+Define value for property 'groupId': edu.hes.e57.demo
+Define value for property 'artifactId': demo
+Define value for property 'version' 1.0-SNAPSHOT: : 1.0-SNAPSHOT                  
+Define value for property 'package' edu.hes.e57.demo: : jar
+Confirm properties configuration:
+groupId: edu.hes.e57.demo
+artifactId: demo
+version: 1.0-SNAPSHOT
+package: jar
+ Y: : y
+[INFO] ----------------------------------------------------------------------------
+[INFO] Using following parameters for creating project from Old (1.x) Archetype: maven-archetype-quickstart:1.1
+[INFO] ----------------------------------------------------------------------------
+[INFO] Parameter: basedir, Value: /workspace
+[INFO] Parameter: package, Value: jar
+[INFO] Parameter: groupId, Value: edu.hes.e57.demo
+[INFO] Parameter: artifactId, Value: demo
+[INFO] Parameter: packageName, Value: jar
+[INFO] Parameter: version, Value: 1.0-SNAPSHOT
+[INFO] project created from Old (1.x) Archetype in dir: /workspace/demo
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 1.311 s
-[INFO] Finished at: 2017-09-08T05:19:32-04:00
-[INFO] Final Memory: 11M/178M
+[INFO] Total time: 02:39 min
+[INFO] Finished at: 2017-09-14T06:52:12-04:00
+[INFO] Final Memory: 14M/127M
 [INFO] ------------------------------------------------------------------------
 ```

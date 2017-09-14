@@ -36,6 +36,7 @@ target/
 .classpath
 .project
 .metadata
+.recommenders/
 
 # NetBeans specific
 nbproject/private/
