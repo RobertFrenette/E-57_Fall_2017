@@ -37,7 +37,7 @@ public class App {
 
     public static void main(String[] args) {
         GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
-        ctx.load("classpath:META-INF/spring/app-context-annotation.xml");
+        ctx.load("classpath:META-INF/spring/app-context.xml");
         ctx.refresh();  
 
         App instance = (App) ctx.getBean("injectCollection");
