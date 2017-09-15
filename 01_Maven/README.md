@@ -17,7 +17,7 @@ $ mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -Darchet
 groupId: edu.hes.e57.demo
 artifactId: demo
 version: : 1.0-SNAPSHOT                  
-package: jar
+package: edu.hes.e57.demo
 ```
 
 
