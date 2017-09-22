@@ -11,8 +11,7 @@ import edu.hes.e57.demo.domain.Manufacturer;
  * This Class selects all Manufacturers from the DB. 
  */
 public class SelectAllManufacturers extends MappingSqlQuery<Manufacturer> {
-    private static final String SQL_SELECT_ALL_MANUFACTURER = 
-            "select id, name from manufacturer";
+    private static final String SQL_SELECT_ALL_MANUFACTURER = "select id, name from manufacturer";
 
     public SelectAllManufacturers(DataSource dataSource) {
         super(dataSource, SQL_SELECT_ALL_MANUFACTURER);

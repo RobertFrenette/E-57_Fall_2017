@@ -11,8 +11,7 @@ import edu.hes.e57.demo.domain.Auto;
  * This Class selects all Autos from the DB. 
  */
 public class SelectAllAutos  extends MappingSqlQuery<Auto> {
-    private static final String SQL_SELECT_ALL_AUTO = 
-            "select id, manufacturer_id, model, year, msrp from auto";
+    private static final String SQL_SELECT_ALL_AUTO = "select id, manufacturer_id, model, year, msrp from auto";
 
     public SelectAllAutos(DataSource dataSource) {
         super(dataSource, SQL_SELECT_ALL_AUTO);

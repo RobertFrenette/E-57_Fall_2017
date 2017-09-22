@@ -10,6 +10,7 @@ src/main/resources/META-INF/sql/db-create-seed.sql
 
 ### DB User Credentials
 user: e57
+
 password: password
 
 ### To Create DB
