@@ -1,6 +1,6 @@
 # Spring JDBC
 
-These examples uses Spring JDBC to perform CRUD operations on a MySQL DB containing Automboile Manufacturer Vehicles.
+These examples use Spring JDBC to perform CRUD operations on a MySQL DB containing Automboile Manufacturer Vehicles.
 
 ## MySQL CMD Line
 Note: This example uses the MySQL installation in MAMP for macOS. The default path for installation is /Applications/MAMP/Library/bin/mysql.

@@ -1,6 +1,6 @@
 # Spring JDBC
 
-These examples uses Spring JDBC to perform CRUD operations on a MySQL DB containing Automboile Manufacturer Vehicles.
+These examples use Spring JDBC to perform CRUD operations on a MySQL DB containing Automboile Manufacturer Vehicles.
 
 ## DB Creation
 See README.md in root dir.
