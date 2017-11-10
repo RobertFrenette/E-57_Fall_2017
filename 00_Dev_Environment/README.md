@@ -7,3 +7,4 @@ Per the Week 1 Handout, use the following links to obtain / install required sof
 * [Eclipse IDE](https://eclipse.org/downloads/packages)
 * [Apache Tomcat](http://tomcat.apache.org)
 * [MySQL](https://www.mysql.com/) / [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
+* [Postman](https://www.getpostman.com/)
