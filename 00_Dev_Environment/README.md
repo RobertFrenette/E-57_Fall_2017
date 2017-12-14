@@ -10,3 +10,4 @@ Per the Week 1 Handout, use the following links to obtain / install required sof
 * [Postman](https://www.getpostman.com/)
 * [ActiveMQ](http://activemq.apache.org/)
 * [HornetQ](http://hornetq.jboss.org/downloads.html/)
+* [JUnit](http://junit.org/junit4/)
