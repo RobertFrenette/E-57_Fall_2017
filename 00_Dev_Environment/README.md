@@ -8,3 +8,5 @@ Per the Week 1 Handout, use the following links to obtain / install required sof
 * [Apache Tomcat](http://tomcat.apache.org)
 * [MySQL](https://www.mysql.com/) / [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
 * [Postman](https://www.getpostman.com/)
+* [ActiveMQ](http://activemq.apache.org/)
+* [HornetQ](http://hornetq.jboss.org/downloads.html/)
