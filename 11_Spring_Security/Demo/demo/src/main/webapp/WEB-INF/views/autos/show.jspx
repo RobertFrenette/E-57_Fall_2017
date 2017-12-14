@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page"
+	 xmlns:c="http://java.sun.com/jsp/jstl/core"
+	 xmlns:spring="http://www.springframework.org/tags"
+	 xmlns:form="http://www.springframework.org/tags/form" 
+	 xmlns:sec="http://www.springframework.org/security/tags" 
+	 version="2.0">
+	
+	<jsp:directive.page contentType="text/html;charset=UTF-8" />
+	<jsp:output omit-xml-declaration="yes" />
+
+	<spring:message code="label_auto_info" var="labelAutoInfo" />
+	<spring:message code="label_auto_model" var="labelAutoModel" />
+    <spring:message code="label_auto_update" var="labelAutoUpdate" />
+	<spring:message code="label_auto_year" var="labelAutoYear" />
+	<spring:message code="label_auto_msrp" var="labelAutoMsrp" />
+    <spring:message code="label_auto_photo" var="labelAutoPhoto"/>
+    
+    <spring:url value="/autos/photo" var="autoPhotoUrl"/>
+	<spring:url value="/autos" var="editAutoUrl" />
+
+	<h1>${labelAutoInfo}</h1>
+
+	<div id="autoInfo">
+		<c:if test="${not empty message}">
+			<div id="message" class="${message.type}">${message.message}</div>
+		</c:if>
+
+       <table>
+            <tr>
+                <td>${labelAutoModel}</td>
+                <td>${auto.model}</td>
+            </tr>
+            <tr>
+                <td>${labelAutoYear}</td>
+                <td>${auto.year}</td>
+            </tr>
+            <tr>
+                <td>${labelAutoMsrp}</td>
+                <td>&#36;${auto.msrp}</td>
+            </tr>
+            <tr>
+                <td>${labelAutoPhoto}</td>
+                <td><img src="${autoPhotoUrl}/${auto.id}"></img></td>
+            </tr>
+        </table>
+
+		<sec:authorize access="hasRole('ROLE_USER')">
+			<a href="${editAutoUrl}/${auto.id}?form">${labelAutoUpdate}</a>
+		</sec:authorize>
+	</div>
+</div>

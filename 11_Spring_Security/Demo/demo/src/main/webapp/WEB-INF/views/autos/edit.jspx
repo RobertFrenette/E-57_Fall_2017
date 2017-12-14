@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page"
+	 xmlns:c="http://java.sun.com/jsp/jstl/core"
+	 xmlns:spring="http://www.springframework.org/tags"
+	 xmlns:form="http://www.springframework.org/tags/form" 
+	 version="2.0">
+
+	<jsp:directive.page contentType="text/html;charset=UTF-8" />
+	<jsp:output omit-xml-declaration="yes" />
+	
+    <spring:message code="label_auto_new" var="labelAutoNew"/>
+    <spring:message code="label_auto_update" var="labelAutoUpdate"/>
+    
+    <spring:message code="label_auto_id" var="labelAutoId" />
+	<spring:message code="label_auto_model" var="labelAutoModel" />
+	<spring:message code="label_auto_year" var="labelAutoYear" />
+	<spring:message code="label_auto_msrp" var="labelAutoMsrp" />
+    <spring:message code="label_auto_photo" var="labelAutoPhoto"/>
+
+	<spring:eval expression="auto.id == null ? labelAutoNew:labelAutoUpdate" var="formTitle" />
+
+	<h1>${formTitle}</h1>
+
+	<div id="autoUpdate">
+		<form:form modelAttribute="auto" id="autoUpdateForm" method="post" enctype="multipart/form-data">
+
+			<c:if test="${not empty message}">
+				<div id="message" class="${message.type}">${message.message}</div>
+			</c:if>
+		
+			<!--  Only show ID field if Editing existing Auto -->
+			<c:if test="${not empty auto.id}">
+	            <form:label path="id">${labelAutoId}</form:label>
+	            <form:input path="id" disabled="true" />
+	            <div><form:errors path="id" cssClass="error" /></div>
+	            <p/>
+            </c:if>
+    		
+            <form:label path="model">${labelAutoModel}*</form:label>
+            <form:input path="model" autofocus="true" />
+            <div><form:errors path="model" cssClass="error" /></div>
+            
+            <form:label path="year">${labelAutoYear}*</form:label>
+            <form:input path="year" />
+            <div><form:errors path="year" cssClass="error" /></div>
+            
+            <form:label path="msrp">${labelAutoMsrp}*</form:label>
+            <form:input path="msrp" />    
+            <div><form:errors path="msrp" cssClass="error" /></div>
+            <p/>
+
+            <!--  Only show Photo field if Adding new Auto -->
+            <c:if test="${empty auto.id}">
+	            <label for="file">
+	                ${labelAutoPhoto}
+	            </label>
+	            <input name="file" type="file"/>
+	            <p/>
+            </c:if>
+        
+			<form:hidden path="version" />
+
+			<button type="submit"
+				class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
+				<span class="ui-button-text">Save</span>
+			</button>
+			<span class="btnSpacer">-</span>
+			<button type="reset"
+				class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
+				<span class="ui-button-text">Reset</span>
+			</button>
+		</form:form>
+	</div>
+</div>
