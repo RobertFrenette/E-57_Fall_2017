@@ -1,4 +1,4 @@
-# CSCI E-57: Java Enterprise Development with the Spring Framework
+# CSCI E-57: Java Enterprise Development with the Spring (v4) Framework
 
 ## Harvard Extension School, Fall 2017
 
